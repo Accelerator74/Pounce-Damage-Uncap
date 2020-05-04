@@ -142,10 +142,10 @@
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug - Left 4 Dead 2|Win32'">
     <ClCompile>
-      <AdditionalOptions>/D SE_EPISODEONE=1 /D SE_DARKMESSIAH=2 /D SE_ORANGEBOX=3 /D SE_ORANGEBOXVALVE=4 /D SE_LEFT4DEAD=5 /D SE_LEFT4DEAD2=6 /D SE_ALIENSWARM=7 %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalOptions>/D SE_EPISODEONE=1 /D SE_DARKMESSIAH=2 /D SE_ORANGEBOX=3 /D SE_BLOODYGOODTIME=4 /D SE_EYE=5 /D SE_CSS=6 /D SE_ORANGEBOXVALVE=7 /D SE_LEFT4DEAD=8 /D SE_LEFT4DEAD2=9 /D SE_ALIENSWARM=10 /D SE_PORTAL2=11 /D SE_CSGO=12 %(AdditionalOptions)</AdditionalOptions>
       <Optimization>Disabled</Optimization>
       <AdditionalIncludeDirectories>$(MMSOURCE18)\core;$(MMSOURCE18)\core\sourcehook;$(HL2SDKL4D2)\public;$(HL2SDKL4D2)\public\engine;$(HL2SDKL4D2)\public\game\server;$(HL2SDKL4D2)\public\tier0;$(HL2SDKL4D2)\public\tier1;$(HL2SDKL4D2)\public\vstdlib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_USRDLL;POUNCE_DAMAGE_UNCAP_EXPORTS;SOURCE_ENGINE=6;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_USRDLL;POUNCE_DAMAGE_UNCAP_EXPORTS;SOURCE_ENGINE=9;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MinimalRebuild>true</MinimalRebuild>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
@@ -168,9 +168,9 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release - Left 4 Dead 2|Win32'">
     <ClCompile>
-      <AdditionalOptions>/D SE_EPISODEONE=1 /D SE_DARKMESSIAH=2 /D SE_ORANGEBOX=3 /D SE_ORANGEBOXVALVE=4 /D SE_LEFT4DEAD=5 /D SE_LEFT4DEAD2=6 /D SE_ALIENSWARM=7 %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalOptions>/D SE_EPISODEONE=1 /D SE_DARKMESSIAH=2 /D SE_ORANGEBOX=3 /D SE_BLOODYGOODTIME=4 /D SE_EYE=5 /D SE_CSS=6 /D SE_ORANGEBOXVALVE=7 /D SE_LEFT4DEAD=8 /D SE_LEFT4DEAD2=9 /D SE_ALIENSWARM=10 /D SE_PORTAL2=11 /D SE_CSGO=12 %(AdditionalOptions)</AdditionalOptions>
       <AdditionalIncludeDirectories>$(MMSOURCE18)\core;$(MMSOURCE18)\core\sourcehook;$(HL2SDKL4D2)\public;$(HL2SDKL4D2)\public\engine;$(HL2SDKL4D2)\public\game\server;$(HL2SDKL4D2)\public\tier0;$(HL2SDKL4D2)\public\tier1;$(HL2SDKL4D2)\public\vstdlib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;_USRDLL;POUNCE_DAMAGE_UNCAP_EXPORTS;SOURCE_ENGINE=6;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;_USRDLL;POUNCE_DAMAGE_UNCAP_EXPORTS;SOURCE_ENGINE=9;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
       <PrecompiledHeader>
       </PrecompiledHeader>

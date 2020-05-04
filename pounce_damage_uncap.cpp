@@ -73,14 +73,14 @@ const char c_sPattern[] = "\xF3\x0F\x10\x1D\x2A\x2A\x2A\x2A\xF3\x0F\x59\xC0\xF3\
 #define  _MinRangeAddrOffset 4
 
 //comiss  xmm0, ds:fl_1000
-// 88 bytes from sig is this instruction.
-// address operand is 3 bytes into that instruction = 91 bytes.
-#define _MaxRangeAddrOffset 91
+// 76 bytes from sig is this instruction.
+// address operand is 3 bytes into that instruction = 79 bytes.
+#define _MaxRangeAddrOffset 79
 
 //mulss   xmm0, ds:fl_1_div_700
-// 123 bytes from the sig
-// address operand is 4 bytes into that instruction = 127 bytes.
-#define _RangeScaleFactorAddrOffset 127
+// 119 bytes from the sig
+// address operand is 4 bytes into that instruction = 123 bytes.
+#define _RangeScaleFactorAddrOffset 123
 
 #elif SH_SYS == SH_SYS_LINUX
 // This segment we search for is the start of the first instruction that loads 300.0f into memory. 
@@ -144,7 +144,7 @@ bool PounceDamageUncap::Load(PluginId id, ISmmAPI *ismm, char *error, size_t max
 	PLUGIN_SAVEVARS();
 
 	GET_V_IFACE_ANY(GetServerFactory, server, IServerGameDLL, INTERFACEVERSION_SERVERGAMEDLL);
-	GET_V_IFACE_ANY(GetEngineFactory, g_pCVar, ICvar, CVAR_INTERFACE_VERSION);
+	GET_V_IFACE_CURRENT(GetEngineFactory, g_pCVar, ICvar, CVAR_INTERFACE_VERSION);
 
 	if(!PatchPounceVars(server))
 	{
