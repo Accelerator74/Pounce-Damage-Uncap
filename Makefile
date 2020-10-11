@@ -43,7 +43,6 @@ HX_FLAGS += -DPOSIX \
 	-D_vsnprintf=vsnprintf \
 	-D_alloca=alloca \
 	-Dstrcmpi=strcasecmp \
-	-DCOMPILER_GCC \
 	-Wno-overloaded-virtual \
 	-Wall \
 	-Werror \
@@ -61,10 +60,11 @@ HX_FLAGS += -DPOSIX \
 	-mfpmath=sse \
 	-fvisibility=hidden \
 	-Wno-non-virtual-dtor \
+	-Wno-deprecated-register \
+	-Wno-overloaded-virtual \
 	-fno-exceptions \
 	-fno-rtti \
-	-fvisibility-inlines-hidden \
-	-std=c++11
+	-fvisibility-inlines-hidden
 
 #
 HX_LIB = Release/pounce_damage_uncap.o \
@@ -79,8 +79,8 @@ all:
 	ln -sf $(HX_SDK)/lib/linux/libvstdlib_srv.so libvstdlib_srv.so;
 	ln -sf $(HX_SDK)/lib/linux/libtier0_srv.so libtier0_srv.so;
 #
-	gcc $(HX_INCLUDE) $(HX_FLAGS) -o Release/pounce_damage_uncap.o -c pounce_damage_uncap.cpp
-	gcc $(HX_INCLUDE) $(HX_FLAGS) -o Release/memutils.o -c memutils.cpp
-	gcc $(HX_INCLUDE) $(HX_LIB) -m32 -shared -static-libgcc -ldl -lm -o Release/pounce_damage_uncap.so
+	clang $(HX_INCLUDE) $(HX_FLAGS) -o Release/pounce_damage_uncap.o -c pounce_damage_uncap.cpp
+	clang $(HX_INCLUDE) $(HX_FLAGS) -o Release/memutils.o -c memutils.cpp
+	clang $(HX_INCLUDE) $(HX_LIB) -m32 -shared -static-libgcc -ldl -lm -o Release/pounce_damage_uncap.so
 #
 	rm -rf Release/*.o
