@@ -43,7 +43,6 @@ HX_FLAGS += -DPOSIX \
 	-D_vsnprintf=vsnprintf \
 	-D_alloca=alloca \
 	-Dstrcmpi=strcasecmp \
-	-Wno-overloaded-virtual \
 	-Wall \
 	-Werror \
 	-Wno-switch \
