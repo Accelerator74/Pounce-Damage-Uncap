@@ -105,10 +105,10 @@ const char c_sPattern[] = "\x0F\x2F\x05\x2A\x2A\x2A\x2A\x0F\x86\xB4\x02\x00\x00\
 // address operand is 4 bytes into that instruction = 36 bytes
 #define _RangeScaleFactorAddrOffset 36
 
-//addss   xmm0, ds:fl_neg_300
-// 60 bytes from sig is this instruction
-// address operand is 3 bytes into that instruction = 63 bytes
-#define _NegativeMinRangeAddrOffset 63
+//movss   xmm1, ds:fl_neg_300
+// 43 bytes from sig is this instruction
+// address operand is 4 bytes into that instruction = 47 bytes
+#define _NegativeMinRangeAddrOffset 47
 
 #endif
 
