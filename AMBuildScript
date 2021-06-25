@@ -233,7 +233,6 @@ class ExtensionConfig(object):
       'uuid.lib',
       'odbc32.lib',
       'odbccp32.lib',
-      'legacy_stdio_definitions.lib',
     ]
 
     if builder.options.opt == '1':
@@ -320,6 +319,7 @@ class ExtensionConfig(object):
 
     if compiler.like('msvc'):
       compiler.defines += ['COMPILER_MSVC', 'COMPILER_MSVC32']
+      compiler.linkflags += ['legacy_stdio_definitions.lib']
     else:
       compiler.defines += ['COMPILER_GCC']
 
