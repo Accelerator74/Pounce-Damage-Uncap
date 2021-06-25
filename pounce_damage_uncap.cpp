@@ -217,13 +217,16 @@ bool PatchPounceVars(void * pServerDll)
 void UnPatchPounceVars()
 {
 	char *pAddr = pPatchBaseAddr;
-	
+	if(pAddr == NULL)
+	{
+		return;
+	}
 	// Revert the address reads to their original address values
 
 	// Unpatch minrange
 	float ** pPatchAddr = (float**)(pAddr + _MinRangeAddrOffset);
 	*pPatchAddr=g_pMinRangeData;
-	
+
 	pPatchAddr = (float**)(pAddr + _MaxRangeAddrOffset);
 	*pPatchAddr=g_pMaxRangeData;
 
