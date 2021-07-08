@@ -88,8 +88,8 @@ const char c_sPattern[] = "\xF3\x0F\x10\x1D\x2A\x2A\x2A\x2A\xF3\x0F\x59\xC0\xF3\
 // comiss  xmm0, ds:flt_BAA9BC (masked)
 // jbe     loc_95EF20
 // movss   xmm1, [ebp+var_19C] (only the instruction)
-// 0F 2F 05 ? ? ? ? 0F 86 B4 02 00 00 A1 5C
-const char c_sPattern[] = "\x0F\x2F\x05\x2A\x2A\x2A\x2A\x0F\x86\xB4\x02\x00\x00\xA1\x5C";
+// 0F 2F 05 ? ? ? ? 0F 86 8A 02 00 00 A1 BC
+const char c_sPattern[] = "\x0F\x2F\x05\x2A\x2A\x2A\x2A\x0F\x86\x8A\x02\x00\x00\xA1\xBC";
 
 //comiss  xmm0, ds:fl_300
 // instruction starts at sig start, addr is 3 bytes into instruction
@@ -101,14 +101,14 @@ const char c_sPattern[] = "\x0F\x2F\x05\x2A\x2A\x2A\x2A\x0F\x86\xB4\x02\x00\x00\
 #define _MaxRangeAddrOffset 21
 
 //mulss   xmm0, ds:fl_1_div_700
-// 32 bytes from sig is this instruction
-// address operand is 4 bytes into that instruction = 36 bytes
-#define _RangeScaleFactorAddrOffset 36
+// 1768 bytes from sig is this instruction
+// address operand is 4 bytes into that instruction = 1772 bytes
+#define _RangeScaleFactorAddrOffset 1772
 
 //movss   xmm1, ds:fl_neg_300
-// 43 bytes from sig is this instruction
-// address operand is 4 bytes into that instruction = 47 bytes
-#define _NegativeMinRangeAddrOffset 47
+// 1778 bytes from sig is this instruction
+// address operand is 4 bytes into that instruction = 1782 bytes
+#define _NegativeMinRangeAddrOffset 1782
 
 #endif
 
