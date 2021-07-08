@@ -101,9 +101,9 @@ const char c_sPattern[] = "\x0F\x2F\x05\x2A\x2A\x2A\x2A\x0F\x86\x8A\x02\x00\x00\
 #define _MaxRangeAddrOffset 21
 
 //mulss   xmm0, ds:fl_1_div_700
-// 1768 bytes from sig is this instruction
-// address operand is 4 bytes into that instruction = 1772 bytes
-#define _RangeScaleFactorAddrOffset 1772
+// 1767 bytes from sig is this instruction
+// address operand is 4 bytes into that instruction = 1771 bytes
+#define _RangeScaleFactorAddrOffset 1771
 
 //movss   xmm1, ds:fl_neg_300
 // 1778 bytes from sig is this instruction
