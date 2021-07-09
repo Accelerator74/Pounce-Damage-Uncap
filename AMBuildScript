@@ -19,7 +19,7 @@ WinLinux = ['windows', 'linux']
 WinLinuxMac = ['windows', 'linux', 'mac']
 
 PossibleSDKs = {
-  'l4d2': SDK('HL2SDKL4D2', '', '15', 'LEFT4DEAD2', WinLinuxMac, 'l4d2'),
+  'l4d2': SDK('HL2SDKL4D2', '_mm', '15', 'LEFT4DEAD2', WinLinuxMac, 'l4d2'),
 }
 
 def ResolveEnvPath(env, folder):

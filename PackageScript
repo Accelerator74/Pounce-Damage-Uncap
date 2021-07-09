@@ -7,7 +7,7 @@ builder.SetBuildFolder('package')
 
 # Add any folders you need to this list
 folder_list = [
-  'addons',
+  'addons/pounce_damage_uncap',
   'addons/metamod',
 ]
 
@@ -28,7 +28,7 @@ def CopyFiles(src, dest, files):
 
 # Copy binaries.
 for cxx_task in Extension.extensions:
-  builder.AddCopy(cxx_task.binary, folder_map['addons'])
+  builder.AddCopy(cxx_task.binary, folder_map['addons/pounce_damage_uncap'])
 
 # VDF file
 CopyFiles('', 'addons/metamod',
